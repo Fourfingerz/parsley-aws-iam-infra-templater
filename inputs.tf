@@ -14,3 +14,9 @@ variable "region" {
   description = "The AWS region to target for deploymnet"
   default     = "us-east-1"
 }
+
+variable "principals" {
+  type        = list(string)
+  description = "A List of ARN roles you want to assume this role to"
+  default     = []
+}
