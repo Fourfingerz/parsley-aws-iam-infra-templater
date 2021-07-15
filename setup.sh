@@ -1,7 +1,7 @@
 # localstack running on docker-compose
 docker-compose up --force-recreate --bulid -data
 terraform init && terraform apply -auto-approve
-cd static && awslocal dynamodb batch-write-item --request-items file://seed-data-dyno-format.json && cd ..
+awslocal dynamodb batch-write-item --request-items file://seed-data-dyno-format.json
 awslocal dynamodb scan --table-name parsley # verify
 
 # testing IAM enforcement strategy
