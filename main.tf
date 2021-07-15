@@ -2,17 +2,12 @@ resource "aws_dynamodb_table" "parsley" {
   name           = var.table-name
   read_capacity  = 2
   write_capacity = 2
-  hash_key       = "PatientId"
-  range_key      = "RecordId"
+  hash_key       = "ParsleyId"
+  range_key      = "Parsley-1"
 
   # Keep track of each row, needs a partition ID
   attribute {
-    name = "PatientId"
-    type = "N"
-  }
-
-  attribute {
-    name = "RecordId"
+    name = "ParsleyId"
     type = "N"
   }
 
@@ -24,6 +19,16 @@ resource "aws_dynamodb_table" "parsley" {
   attribute {
     name = "Parsley-2"
     type = "N"
+  }
+
+  global_secondary_index {
+    name               = "Parsley-1-Index"
+    hash_key           = "Parsley-1"
+    range_key          = "Parsley-2"
+    write_capacity     = 1 
+    read_capacity      = 1
+    projection_type    = "INCLUDE"
+    non_key_attributes = ["ParsleyId"]
   }
 
   tags = {
