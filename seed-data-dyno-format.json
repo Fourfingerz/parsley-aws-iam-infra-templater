@@ -1,0 +1,79 @@
+{
+    "parsley": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "ParsleyId": {
+                        "N": "1"
+                    },
+                    "Parsley-1": {
+                        "S": "Tabbouleh"
+                    },
+                    "Parsley-2": {
+                        "N": "1000"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ParsleyId": {
+                        "N": "2"
+                    },
+                    "Parsley-1": {
+                        "S": "Potato Salad"
+                    },
+                    "Parsley-2": {
+                        "N": "1001"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ParsleyId": {
+                        "N": "3"
+                    },
+                    "Parsley-1": {
+                        "S": "Chimichurri"
+                    },
+                    "Parsley-2": {
+                        "N": "1002"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ParsleyId": {
+                        "N": "4"
+                    },
+                    "Parsley-1": {
+                        "S": "Stuffed Peppers"
+                    },
+                    "Parsley-2": {
+                        "N": "1003"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ParsleyId": {
+                        "N": "5"
+                    },
+                    "Parsley-1": {
+                        "S": "Soup"
+                    },
+                    "Parsley-2": {
+                        "N": "1004"
+                    }
+                }
+            }
+        }
+    ]
+}
